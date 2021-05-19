@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy it</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <ul class="menu">
+            <li class="button" data-filter="all">All</li>
+            <li class="button" data-filter="website">Website</li>
+            <li class="button" data-filter="graphics">Graphics</li>
+            <li class="button" data-filter="web">Web</li>
+            <li class="button" data-filter="psd">PSD</li>
+            <li class="button" data-filter="logo">Logo</li>
+            <li class="button" data-filter="application">Application</li>
+            <div style="clear: both;"></div>
+        </ul>
+        <div class="box filter psd">PSD</div>
+        <div class="box filter graphics">Graphics</div>
+        <div class="box filter website">Website</div>
+        <div class="box filter application">Application</div>
+        <div class="box filter logo">Logo</div>
+        <div class="box filter psd">PSD</div>
+        <div class="box filter graphics">Graphics</div>
+        <div class="box filter website">Website</div>
+        <div class="box filter logo">Logo</div>
+        <div class="box filter application">Application</div>
+        <div class="box filter application">Application</div>
+        <div class="box filter logo">Logo</div>
+        <div class="box filter psd">PSD</div>
+        <div class="box filter graphics">Graphics</div>
+        <div class="box filter website">Website</div>
+        <div class="box filter logo">Logo</div>
+        <div class="box filter application">Application</div>
+        <div style="clear: both;"></div>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consequuntur ex eaque porro eos deleniti eveniet delectus, accusamus repellat fugiat, mollitia placeat, nihil vitae? Debitis, ipsum cumque laboriosam aperiam fugit deserunt vel quas quidem quo soluta provident magni necessitatibus vero dolore culpa blanditiis minus fuga asperiores ad illo voluptatem iste molestias sunt. Sit consectetur quae ea ratione itaque. Quia, sint, obcaecati possimus velit eius facilis veritatis tempora dolorem dicta nobis inventore vel. Perspiciatis porro odio quidem assumenda non? Recusandae laborum quos facilis dolor cum necessitatibus! Natus, ad nulla! Maiores fugiat fugit soluta at dolor in molestiae deserunt provident labore voluptate. Unde dignissimos dolor quae placeat, pariatur soluta, ab est minus, porro natus provident voluptatem quod exercitationem necessitatibus assumenda laborum ducimus aliquam repellat nostrum. Sapiente, voluptatem esse? Rerum libero qui pariatur, quo ipsam consequuntur suscipit possimus eveniet, est, odit sequi ipsa repellat corrupti beatae enim? Quibusdam aliquid asperiores dolorum aperiam doloribus vero fugit alias, temporibus perspiciatis nam sunt, a, enim magnam quo animi voluptas velit suscipit cupiditate odit tempora atque fuga. Dolore, porro! Quas obcaecati asperiores sit vero earum odit similique iusto corrupti quidem corporis natus provident eligendi architecto consequuntur dignissimos, tempora porro. Minima ipsum, illo dolor eum cupiditate perferendis quas.</p>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consequuntur ex eaque porro eos deleniti eveniet delectus, accusamus repellat fugiat, mollitia placeat, nihil vitae? Debitis, ipsum cumque laboriosam aperiam fugit deserunt vel quas quidem quo soluta provident magni necessitatibus vero dolore culpa blanditiis minus fuga asperiores ad illo voluptatem iste molestias sunt. Sit consectetur quae ea ratione itaque. Quia, sint, obcaecati possimus velit eius facilis veritatis tempora dolorem dicta nobis inventore vel. Perspiciatis porro odio quidem assumenda non? Recusandae laborum quos facilis dolor cum necessitatibus! Natus, ad nulla! Maiores fugiat fugit soluta at dolor in molestiae deserunt provident labore voluptate. Unde dignissimos dolor quae placeat, pariatur soluta, ab est minus, porro natus provident voluptatem quod exercitationem necessitatibus assumenda laborum ducimus aliquam repellat nostrum. Sapiente, voluptatem esse? Rerum libero qui pariatur, quo ipsam consequuntur suscipit possimus eveniet, est, odit sequi ipsa repellat corrupti beatae enim? Quibusdam aliquid asperiores dolorum aperiam doloribus vero fugit alias, temporibus perspiciatis nam sunt, a, enim magnam quo animi voluptas velit suscipit cupiditate odit tempora atque fuga. Dolore, porro! Quas obcaecati asperiores sit vero earum odit similique iusto corrupti quidem corporis natus provident eligendi architecto consequuntur dignissimos, tempora porro. Minima ipsum, illo dolor eum cupiditate perferendis quas.</p>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".button").click(function(){
+                var value=$(this).attr("data-filter")
+                if(value == "all"){
+                    $(".filter").show("1000")
+                }else{
+                    $(".filter").not("."+value).hide("1000")
+                    $(".filter").filter("."+value).show("1000")
+                }
+            })
+            $("ul .button").click(function(){
+                    $(this).addClass("active").siblings().removeClass("active")
+            })
+            $(window).scroll(function(){
+                if($(this).scrollTop()>100){
+                    $(".menu").addClass("sticky")
+                }else{
+                    $(".menu").removeClass("sticky")
+                }
+            })
+        
+        })
+    </script>
+</body>
+</html>

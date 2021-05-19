@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Accordion Tutorial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cardSlider">
+        <div class="cardContainer">
+            <div class="cardSingle">
+                <article>
+                    <h2>Card 01</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore iure blanditiis temporibus. Aperiam beatae expedita dicta, eius incidunt nostrum architecto ea quas sapiente, consectetur ipsam quos qui impedit vitae rerum?</p>
+                </article>
+            </div>   
+            <div class="cardSingle">
+                <article>
+                    <h2>Card 02</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore iure blanditiis temporibus. Aperiam beatae expedita dicta, eius incidunt nostrum architecto ea quas sapiente, consectetur ipsam quos qui impedit vitae rerum?</p>
+                </article>
+            </div> 
+            <div class="cardSingle">
+                <article>
+                    <h2>Card 03</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore iure blanditiis temporibus. Aperiam beatae expedita dicta, eius incidunt nostrum architecto ea quas sapiente, consectetur ipsam quos qui impedit vitae rerum?</p>
+                </article>
+            </div>
+            <div class="cardSingle">
+                <article>
+                    <h2>Card 04</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore iure blanditiis temporibus. Aperiam beatae expedita dicta, eius incidunt nostrum architecto ea quas sapiente, consectetur ipsam quos qui impedit vitae rerum?</p>
+                </article>
+            </div>
+        </div>
+        <div class="cardNavbar">
+            <ul id="nav">
+                <li>Card One</li>
+                <li>Card Two</li>
+                <li>Card Three</li>
+                <li>Card four</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <Script>
+       
+        $(document).ready(function(){
+            $(".cardNavbar ul li:nth-child(1)").on("mouseover",function(){
+                $(".cardContainer .cardSingle").removeClass("active");
+                $(".cardContainer .cardSingle:nth-child(1)").addClass("active");
+            })  
+            $(".cardNavbar ul li:nth-child(2)").on("mouseover",function(){
+                $(".cardContainer .cardSingle").removeClass("active");
+                $(".cardContainer .cardSingle:nth-child(2)").addClass("active");
+            })  
+            $(".cardNavbar ul li:nth-child(3)").on("mouseover",function(){
+                $(".cardContainer .cardSingle").removeClass("active");
+                $(".cardContainer .cardSingle:nth-child(3)").addClass("active");
+            }) 
+            $(".cardNavbar ul li:nth-child(4)").on("mouseover",function(){
+                $(".cardContainer .cardSingle").removeClass("active");
+                $(".cardContainer .cardSingle:nth-child(4)").addClass("active");
+            })
+        })
+    </Script>
+</body>
+</html>
