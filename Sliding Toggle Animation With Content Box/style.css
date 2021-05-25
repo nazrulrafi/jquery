@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #262626;
+}
+.box{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    padding: 20px;
+    transition: 1s;
+    box-sizing: border-box;
+    overflow: hidden;
+    top:calc(50% - 160px);
+    left:calc(50% - 170px);
+
+}
+.box.active{
+    width: 300px;
+    height: 370px;
+}
+.box.active p{
+    visibility: visible;
+    transition-delay: .5s;
+}
+.box p{
+    text-align: justify;
+    font-size: 13px;
+    transition: 0.5 ease;
+    margin-top: 25px;
+    visibility: hidden;
+}
+.toggle{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transition: 1s;
+    background: #2e80ff;
+    cursor: pointer;
+}
+.toggle span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    transition: 1s ease;
+}
+.toggle span::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    height: 100%;
+    transition: 1s ease;
+    transform: rotate(90deg);
+}
+.toggle.active{
+    background: #ff3131;
+    border-radius: 50%;
+    top: 0;
+    left: calc(100% - 40px);
+    transform: scale(0.7);
+}
+.toggle.active span{
+    transform: rotate(220deg);
+}
